@@ -1,4 +1,4 @@
-package com.tbi_vendilator;
+package tech.hexify.tbi_vendilator;
 
 import com.facebook.react.ReactActivity;
 

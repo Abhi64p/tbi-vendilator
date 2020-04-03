@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.tbi_vendilator"
+        applicationId "tech.hexify.tbi_vendilator"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
