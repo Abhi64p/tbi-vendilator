@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, StatusBar, ScrollView } from 'react-native'
+import { View, StyleSheet, StatusBar, ScrollView, Text} from 'react-native'
 
 import Graph1 from '../components/Graph1'
+import Graph2 from '../components/Graph2'
 import BoxManager from '../components/BoxManager'
 
 class Main extends Component {
@@ -16,7 +17,10 @@ class Main extends Component {
                     style={{ height: '100%', width: '100%' }}
                     contentContainerStyle={styles.scrollViewContentStyle}
                 >
-                    <View style={{ alignSelf: 'center' }}><Graph1 /></View>
+                    <Text style={styles.heading}>Pressure</Text>
+                    <View style={styles.graphStyle}><Graph1 /></View>
+                    <Text style={[styles.heading, {marginTop: 20}]}>Volume</Text>
+                    <View style={styles.graphStyle}><Graph2 /></View>
                     <BoxManager />
                 </ScrollView>
             </View>
@@ -34,6 +38,15 @@ const styles = StyleSheet.create({
     scrollViewContentStyle: {
         paddingTop: 10,
         paddingBottom: 10
+    },
+    heading:{
+        marginLeft: 20,
+        marginBottom: 10,
+        color: 'white', 
+        fontSize: 18
+    },
+    graphStyle: {
+        alignItems: 'center'
     }
 })
 

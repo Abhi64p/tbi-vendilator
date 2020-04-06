@@ -4,22 +4,19 @@ import { LineChart } from 'react-native-chart-kit'
 
 const screenWidth = Dimensions.get("window").width
 
-class Graph1 extends Component {
+class Graph2 extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
             datas: [
-                [-150, -140, -140, -150, -143, 0, 0, 0, -20, 0],
-                [-140, -140, -150, -143, 0, 0, 0, -20, 0, -150],
-                [-140, -150, -143, 0, 0, 0, -20, 0, -150, -140],
-                [-150, -143, 0, 0, 0, -20, 0, -150, -140, -140],
-                [-143, 0, 0, 0, -20, 0, -150, -140, -140, -150],
-                [0, 0, 0, -20, 0, -150, -140, -140, -150, -143],
-                [0, 0, -20, 0, -150, -140, -140, -150, -143, 0],
-                [0, -20, 0, -150, -140, -140, -150, -143, 0, 0],
-                [-20, 0, -150, -140, -140, -150, -143, 0, 0, 0],
-                [0, -150, -140, -140, -150, -143, 0, 0, 0, -20]
+                [3, 3, 0, 4, 3, 4, 4],
+                [3, 0, 4, 3, 4, 4, 3],
+                [0, 4, 3, 4, 4, 3, 3],
+                [4, 3, 4, 4, 3, 3, 0],
+                [3, 4, 4, 3, 3, 0, 4],
+                [4, 4, 3, 3, 0, 4, 3],
+                [4, 3, 3, 0, 4, 3, 4]
             ],
             index: 0,
             oldIndex: 0
@@ -56,7 +53,7 @@ class Graph1 extends Component {
                     bezier={true}
                     withDots={false}
                     withVerticalLabels={false}
-                    yAxisInterval={2}
+                    yAxisInterval={0.5}
                     style={{ borderRadius: 15 }}
                 />
             </View>
@@ -64,14 +61,14 @@ class Graph1 extends Component {
     }
 
     moveIndex = () => {
-        this.setState({ index: (this.state.index + 1) % 10 })
+        this.setState({ index: (this.state.index + 1) % 7 })
     }
 }
 
 const chartConfig = {
     color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     strokeWidth: 2,
-    decimalPlaces: 0
+    decimalPlaces: 1
 }
 
-export default Graph1
+export default Graph2

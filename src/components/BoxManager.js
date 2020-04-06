@@ -25,16 +25,20 @@ class BoxManager extends Component {
         return (
             <>
                 <View style={styles.boxRow}>
-                    <Box title='P1' value={this.state.v1} />
-                    <Box title='v1' value={this.state.v2} />
+                    <Box title='Pressure' value='2' />
+                    <Box title='Flow' value='0' />
                 </View>
                 <View style={styles.boxRow}>
-                    <Box title='f1' value='v1' />
-                    <Box title='f2' value='v2' />
+                    <Box title='TH' value='0' />
+                    <Box title='BPM' value='0' />
                 </View>
                 <View style={styles.boxRow}>
-                    <Box title='f3' value='v3' />
-                    <Box title='f4' value='v4' />
+                    <Box title='Volume' value='4' />
+                    <Box title='PEEP' value='2' />
+                </View>
+                <View style={styles.boxRow}>
+                    <Box title='IE' value='0' />
+                    <Box title='PLIMIT' value='29' />
                 </View>
             </>
         )
